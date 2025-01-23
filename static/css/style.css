@@ -1,0 +1,1371 @@
+:root {
+    --bs-primary: #9A5B7E; /* Muted Pinkish-Purple */
+    --bs-secondary: #C895B5; /* Soft Pinkish-Purple */
+    --bs-success: #7A5B6E; /* Dark Muted Purple */
+    --bs-info: #E8B4D4; /* Light Pink */
+    --bs-warning: #D97C8C; /* Coral Pink for contrast */
+    --bs-light: #F5E9F2; /* Very Light Pink */
+    --bs-dark: #3E2A35; /* Deep Purple-Brown */
+    --bs-taupe: #A88B9E; /* Muted Taupe */
+    --bs-gray: #C4B7C1; /* Light Gray with a hint of pink */
+    --bs-mist: #E9DFE6; /* Soft Mist with a pinkish tone */
+    --bs-white: #FFFFFF; /* Pure White */
+    --bs-black: #000000; /* Black */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--bs-primary); /* Muted Pinkish-Purple */
+    border-color: var(--bs-primary);
+    color: var(--bs-white); /* White text */
+}
+
+.btn-primary:hover {
+    background-color: var(--bs-success); /* Dark Muted Purple */
+    border-color: var(--bs-success);
+}
+
+/* Backgrounds */
+.bg-primary {
+    background-color: var(--bs-primary) !important; /* Muted Pinkish-Purple */
+}
+
+.bg-secondary {
+    background-color: var(--bs-secondary) !important; /* Soft Pinkish-Purple */
+}
+
+/* Text */
+.text-primary {
+    color: var(--bs-primary) !important; /* Muted Pinkish-Purple */
+}
+
+.text-secondary {
+    color: var(--bs-secondary) !important; /* Soft Pinkish-Purple */
+}
+
+/* Borders */
+.border-primary {
+    border-color: var(--bs-primary) !important; /* Muted Pinkish-Purple */
+}
+
+.border-secondary {
+    border-color: var(--bs-secondary) !important; /* Soft Pinkish-Purple */
+}
+
+/* Accents */
+.highlight {
+    background-color: var(--bs-info); /* Light Pink */
+    color: var(--bs-dark); /* Deep Purple-Brown text */
+}
+
+/* Gradients */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--bs-primary), var(--bs-secondary));
+}
+
+/* Links */
+a {
+    color: var(--bs-primary); /* Muted Pinkish-Purple */
+}
+
+a:hover {
+    color: var(--bs-success); /* Dark Muted Purple */
+}
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+/*** Spinner End ***/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn-hover-bg {
+    transition: 0.5s;
+}
+
+.btn-hover-bg:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-primary) !important;
+}
+
+.btn-hover-color {
+    transition: 0.5s;
+}
+
+.btn-hover-color:hover {
+    color: var(--bs-secondary) !important;
+}
+/*** Topbar Start ***/
+.topbar {
+    padding: 2px 10px 2px 20px;
+    background: var(--bs-primary) !important;
+}
+
+.topbar a,
+.topbar a i {
+    color: #fff; /* Ensure text and icons are white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.topbar a:hover,
+.topbar a i:hover {
+    color: var(--bs-secondary) !important;
+     cursor: none;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        display: none;
+    }
+}
+/*** Topbar End ***/
+
+/*** Navbar Start ***/
+.navbar {
+    padding: 0;
+    background-color: #fff; /* Set your desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    width: 100%; /* Ensure navbar spans full width */
+    max-width: 100%; /* Prevent any max-width restrictions */
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #000; /* Set your desired link color */
+    text-decoration: none;
+    font-family: "Bebas Neue", serif;
+    /*font-weight: 400;*/
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary); /* Set your desired hover/active color */
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: 0.5s;
+        opacity: 0;
+    }
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+    background-color: #f2f2f2;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+.dropdown-item .nav-item .nav-link:active {
+    background-color: var(--bs-primary);
+}
+/* Responsive behavior for smaller screens */
+@media (max-width: 1200px) {
+    .navbar .collapse.navbar-collapse .btn-hover-bg.btn {
+        margin-bottom: 20px;
+    }
+}
+/*** Navbar End ***/
+
+/*** Carousel Start ***/
+.carousel-header #carouselId .carousel-inner .carousel-item {
+    position: relative;
+    min-height: 100vh;
+}
+
+.carousel-header #carouselId .carousel-inner .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-header #carouselId .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+}
+
+.carousel-header #carouselId.carousel .carousel-indicators {
+    display: none; /* Hide indicators */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: none; /* Hide control buttons */
+}
+/*** Carousel End ***/
+
+
+
+/*** Single Page Hero Header Start ***/
+.bg-breadcrumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/breadcrumb-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 0 0;
+}
+/*** Single Page Hero Header End ***/
+
+
+/*** About Start ***/
+.about h5{
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+.about .tab-class .nav{
+    display: flex;
+    flex-direction: row;
+}
+.about p{
+    color: white;
+}
+.about .tab-class .nav .nav-item a{
+    flex: 1;
+    margin: 0 5px;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+.about .tab-class .nav .nav-item a.active,
+.about .tab-class .nav .nav-item a.active span {
+    background: var(--bs-primary) !important;
+    color: var(--bs-white) !important;
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row; /* Ensure items stay in a row */
+        justify-content: flex-start;
+    }
+
+    .nav-item {
+        flex: none; /* Do not allow items to grow */
+        width: 30%; /* Set a specific width for each item */
+    }
+}
+
+/*** About End ***/
+
+/* Sponsors Section */
+.sponsors-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 3rem 0; /* Adjust padding as needed */
+    overflow: hidden; /* Hide overflow for animations */
+}
+
+.sponsors-section .lead {
+    color: var(--bs-primary);
+    padding-top: 10px;
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+/* Horizontal Scrolling Container */
+.sponsors-scroll-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of sponsor cards */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+
+.sponsors-scroll-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.sponsors-scroll {
+    display: inline-flex; /* Display sponsor cards in a row */
+    gap: 15px; /* Space between sponsor cards */
+    padding: 0 20px 20px 0;
+}
+
+/* Sponsor Card */
+.sponsor-card {
+    background: #fff; /* White background for sponsor cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 12px; /* Padding inside sponsor cards */
+    display: inline-flex; /* Ensure cards stay in a row */
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px; /* Fixed width for sponsor cards */
+    height: 70px; /* Fixed height for sponsor cards */
+}
+
+/* Sponsor Image */
+.sponsor-img {
+    max-width: 100%; /* Ensure image fits within the card */
+    max-height: 100%; /* Ensure image fits within the card */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* Sponsor Name */
+.sponsor-name {
+    font-size: 0.6rem; /* Adjust font size */
+    font-weight: 500; /* Medium font weight */
+    color: #333; /* Dark text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-align: center; /* Center text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Hover Effect */
+.sponsor-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+/** sponsors end **/
+
+/*** Activities Start ***/
+.activity {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding: 4rem 0; /* Adjust padding as needed */
+}
+
+.service h5 {
+    color: var(--bs-primary); /* Primary color for the heading */
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+
+/* Service Item */
+.service-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for the card */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Service Image */
+.service-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Service Link */
+.service-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    transition: background 0.5s ease;
+}
+
+.service-link:hover {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+.service-link a {
+    color: var(--bs-white); /* White text color */
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.service-link:hover a:hover {
+    color: var(--bs-primary); /* Primary color on hover */
+}
+.service-des {
+    overflow: hidden; /* Ensure text overflows are hidden */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+}
+/* Responsive Grid */
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align cards to the left */
+}
+
+.col-md-6, .col-lg-4, .col-xl-3 {
+    flex: 0 0 25%; /* 4 cards per row */
+    max-width: 25%; /* Ensure columns don't exceed container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 33.33%; /* 3 cards per row on smaller screens */
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 50%; /* 2 cards per row on even smaller screens */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%; /* 1 card per row on mobile screens */
+        max-width: 100%;
+    }
+}
+/** Activity End **/
+
+/** Announcement start **/
+.announcements {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding: 4rem 0; /* Adjust padding as needed */
+}
+
+.announcements h5 {
+    color: var(--bs-primary); /* Primary color for the heading */
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.announcements h1 {
+    color: #333; /* Dark text color */
+}
+
+/* Announcement Item */
+.announcement-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for the card */
+}
+
+.announcement-item:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Announcement Image */
+.announcement-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+/* Announcement Link */
+.announcement-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    transition: background 0.5s ease;
+}
+
+.announcement-link:hover {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+.announcement-link a {
+    color: var(--bs-white); /* White text color */
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.announcement-link:hover a:hover {
+    color: var(--bs-primary); /* Primary color on hover */
+}
+
+/* Responsive Grid */
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards if fewer than 4 */
+}
+
+.col-md-6, .col-lg-4, .col-xl-3 {
+    flex: 0 0 25%; /* 4 cards per row */
+    max-width: 25%; /* Ensure columns don't exceed container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 33.33%; /* 3 cards per row on smaller screens */
+        max-width: 33.33%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 50%; /* 2 cards per row on even smaller screens */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%; /* 1 card per row on mobile screens */
+        max-width: 100%;
+    }
+}
+
+/** Announcement end **/
+
+/*** Events Start ***/
+.event h5{
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.event-carousel .event-item {
+    width: 250px; /* Fixed width for each card */
+    flex: 0 0 auto;
+    margin: 0 10px; /* Add some spacing between cards */
+}
+
+.event-carousel.fewer-than-3 {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.event-carousel.owl-carousel .owl-stage {
+    display: flex;
+    justify-content: flex-start; /* Align cards to the start */
+}
+/* Grid layout for events */
+.event-carousel .event-item {
+    width: 100%; /* Make cards take full width of their container */
+    flex: 0 0 auto; /* Prevent cards from stretching or shrinking */
+    margin-bottom: 20px; /* Add spacing between cards */
+    background: var(--bs-white); /* Add background color */
+    border: 1px solid var(--bs-primary); /* Add border */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.event-carousel .event-item img {
+    width: 100%; /* Ensure the image fills the card width */
+    height: 150px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+}
+
+.event-carousel .event-item .event-content {
+    padding: 15px; /* Add padding */
+    text-align: left; /* Align content to the left */
+    flex: 1; /* Allow content to fill the remaining space */
+    display: flex;
+    flex-direction: column; /* Space out content */
+}
+
+.event-carousel .event-item h4 {
+    font-size: 1.25rem; /* Increase heading size */
+    margin: 8px 0; /* Reduce margin */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.event-carousel .event-item p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+    margin: 8px 0; /* Reduce margin */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.event-carousel .event-item a {
+    display: inline-block;
+    margin-top: 10px; /* Adjust button margin */
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 0.9rem; /* Adjust button font size */
+    align-self: flex-start;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .event-carousel .event-item {
+        width: 100%; /* Make cards full width on smaller screens */
+        margin: 0 0 20px 0; /* Adjust margin for smaller screens */
+    }
+
+    .event-carousel .event-item h4 {
+        font-size: 1.1rem; /* Adjust title size for smaller screens */
+    }
+
+    .event-carousel .event-item p {
+        font-size: 0.85rem; /* Adjust description size for smaller screens */
+    }
+}
+.event .event-carousel.owl-carousel {
+    position: relative;
+}
+.event .event-carousel.owl-carousel .owl-nav .owl-prev {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.event .event-carousel.owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    width: 80px;
+    height: 40px;
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.event .event-carousel.owl-carousel .owl-nav .owl-prev:hover,
+.event .event-carousel.owl-carousel .owl-nav .owl-next:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+.event .event-carousel .event-item .event-content {
+    border-style: dotted;
+    border-top: 0;
+    border-color: var(--bs-white);
+    background: #fff;
+}
+/*** Events End ***/
+
+
+/*** Blog Start ***/
+.blog h5{
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+.blog .blog-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* White background for the card */
+    height: 100%; /* Ensure all cards have the same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog .blog-item:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Blog Image */
+.blog .blog-item .blog-img {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Fixed height for all images */
+}
+
+.blog .blog-item .blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area */
+    transition: transform 0.5s ease;
+}
+
+.blog .blog-item .blog-img:hover img {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Blog Info */
+.blog .blog-item .blog-img .blog-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    color: var(--bs-white) !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+.blog .blog-item .blog-img:hover .blog-info {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+}
+
+/* Search Icon */
+.blog .blog-item .blog-img .search-icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.blog .blog-item .blog-img:hover .search-icon {
+    opacity: 1;
+}
+
+/* Blog Content */
+.blog .blog-item .text-dark {
+    padding: 20px;
+    flex: 1; /* Ensure content takes up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog .blog-item h4 {
+    font-size: 1.25rem; /* Fixed font size for title */
+    margin-bottom: 10px;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis to overflow text */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+.blog .blog-item p {
+    font-size: 1rem; /* Fixed font size for description */
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis to overflow text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .blog .blog-item h4 {
+        font-size: 1.1rem; /* Adjust title size for smaller screens */
+    }
+
+    .blog .blog-item p {
+        font-size: 0.9rem; /* Adjust description size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog .blog-item h4 {
+        font-size: 1rem; /* Adjust title size for mobile screens */
+    }
+
+    .blog .blog-item p {
+        font-size: 0.85rem; /* Adjust description size for mobile screens */
+    }
+
+    .col-lg-6, .col-xl-3 {
+        flex: 0 0 100%; /* Make cards full width on smaller screens */
+        max-width: 100%;
+    }
+}
+/*** Blog End ***/
+
+/*** Gallery Start ***/
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 0; /* No gap between items */
+    height: 100%; /* Ensure the grid takes full height */
+}
+
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure columns take full height */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    flex: 1; /* Ensure items stretch to fill the column */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Ensure images fill the container */
+    object-fit: cover; /* Stretch images to fill the space */
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Gallery Content */
+.gallery-item .gallery-content {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(249, 195, 123, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.gallery-item:hover .gallery-content {
+    height: 100%;
+}
+
+.gallery-item .gallery-content .gallery-inner {
+    transition: 0.5s;
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 40px;
+}
+
+.gallery-item:hover .gallery-content .gallery-inner {
+    background: rgba(249, 195, 123, 1);
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search Icon */
+.gallery-item .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -80px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.gallery-item:hover .search-icon {
+    opacity: 1;
+}
+/*** Gallery End ***/
+
+
+/*** Volunteer Start ***/
+.volunteer {
+    background: rgba(249, 195, 123, .1);
+}
+.volunteer .volunteer-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.volunteer .volunteer-img .volunteer-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+    transition: 0.5s;
+}
+
+.volunteer .volunteer-img:hover .volunteer-title {
+    background: rgba(0, 0, 0, .5);
+}
+
+.volunteer .volunteer-img img {
+    transition: 0.5s;
+}
+
+.volunteer .volunteer-img:hover img {
+    transform: scale(1.2);
+}
+/*** Volunteer End ***/
+
+
+/*** Contact Start ***/
+.contact {
+    background: rgba(249, 195, 123, .4);
+    border-style: dotted;
+    border-color: var(--bs-white);
+}
+
+/*** Contact End ***/
+
+
+/*** Footer Start ***/
+/* Map Background */
+.g-absolute-centered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Contact Information Overlay */
+.g-bg-dark-opacity-0_8 {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+}
+
+.rounded {
+    border-radius: 10px; /* Rounded corners for the contact info box */
+}
+
+/* Copyright Notice */
+.g-pos-rel {
+    position: relative;
+}
+
+.g-z-index-1 {
+    z-index: 1;
+}
+/*.footer {*/
+/*    border-top: 3px;*/
+/*    border-right: 0;*/
+/*    border-bottom: 0;*/
+/*    border-left: 0;*/
+/*    border-style: dotted;*/
+/*    border-color: var(--bs-light);*/
+/*}*/
+/*.footer .footer-item a,*/
+/*.footer .footer-item p {*/
+/*    line-height: 35px;*/
+/*    color: var(--bs-body);*/
+/*    transition: 0.5s;*/
+/*}*/
+
+/*.footer .footer-item a:hover {*/
+/*    color: var(--bs-primary);*/
+/*    letter-spacing: 1px;*/
+/*}*/
+
+/*.footer .footer-item .footer-gallery {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.footer .footer-item .footer-gallery img {*/
+/*    transition: 0.5s;*/
+/*}*/
+
+/*.footer .footer-item .footer-gallery:hover img {*/
+/*    transform: scale(1.2);*/
+/*}*/
+
+/*.footer .footer-item .footer-gallery .footer-search-icon {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    transition: 0.5s;*/
+/*    opacity: 0;*/
+/*}*/
+
+/*.footer .footer-item .footer-gallery:hover .footer-search-icon {*/
+/*    opacity: 1;*/
+/*    background: rgba(0, 0, 0, .6);*/
+/*}*/
+/*** Footer End ***/
+
+/*** copyright Start ***/
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--bs-dark) !important;
+}
+/*** copyright end ***/
+
+/**-------------------------------------------**/
+/** about page **/
+.bg-breadcrumb {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0 0 0;
+}
+.services-page__container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-page__heading {
+            text-align: center;
+            color: #444;
+            margin-bottom: 40px;
+        }
+
+        /* Grid Layout for Sections */
+        .services-page__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* Section Styles */
+        .services-page__section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .services-page__section-title {
+            text-align: left; /* Center the icon and title */
+            margin-bottom: 20px; /* Add spacing below the title */
+        }
+
+        .services-page__section-title i {
+             font-size: 28px;
+            color: var(--bs-primary);
+            display: block; /* Make the icon a block element to place it on top */
+            margin-bottom: 10px; /* Add spacing between the icon and title */
+        }
+
+        .services-page__section-title h2 {
+            margin: 0; /* Remove default margin for the title */
+            font-size: 24px;
+            color: var(--bs-primary);
+            font-family: "Bebas Neue", serif;
+            letter-spacing: 2px;
+            font-weight: 200;
+        }
+
+
+
+        .services-page__section-description {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Points Styles */
+        .services-page__points {
+            margin-top: 10px;
+        }
+
+        .services-page__points-list {
+            list-style-type: none;
+            color: #444;
+            padding-left: 0;
+        }
+
+        .services-page__points-item {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .services-page__points-item.hidden {
+            display: none;
+        }
+
+        /* Button Styles */
+        .services-page__more-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: var(--bs-primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .services-page__more-button:hover {
+            background-color: var(--bs-secondary);
+        }
+        @media (max-width: 768px) {
+            .services-page__grid {
+                grid-template-columns: 1fr; /* 1 column on smaller screens */
+            }
+        }
+/**-----------------------------------------**/
+/** tenders page **/
+.tenders-container {
+  max-width: 1200px;
+  margin: 10px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.tenders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tenders-table th,
+.tenders-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tenders-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+}
+
+.tenders-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-open {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.status-closed {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.download-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+.pagination .page-item .page-link {
+    background-color: #fff; /* Light gray background */
+    border-color: var(--bs-primary) ; /* Light gray border */
+    color: var(--bs-primary);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: #fff;
+    color: #fff; /* White text for active */
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: var(--bs-secondary);
+    border-color:var(--bs-primary);
+}
+
+/* Disable shadow when pressing buttons */
+.pagination .page-item .page-link:active {
+        box-shadow: none;
+}
+.pagination .page-item .page-link:focus,
+.pagination .page-item .page-link:active, .dataTables_filter input:focus, .dataTables_length select:focus {
+    box-shadow: none;
+    outline: none; /* Optional: Remove the outline as well */
+}
+.dataTables_length select:focus{
+     border-color:var(--bs-primary);
+}
+.form-control:focus{
+    border-color:var(--bs-primary);
+}
+.tenders-table .btn-primary:focus, .tenders-table .btn-primary:active {
+    background-color: var(--bs-secondary);
+    border-color:var(--bs-primary);
+  }
+/* Responsive Styles for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .tenders-table {
+    display: block;
+    width: 100%;
+  }
+
+  .tenders-table thead {
+    display: none; /* Hide the header on smaller screens */
+  }
+
+  .tenders-table tbody,
+  .tenders-table tr,
+  .tenders-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .tenders-table tr {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+
+  .tenders-table td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .tenders-table td:before {
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label); /* Use data-label for mobile headers */
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .tenders-table td a {
+    display: inline-block;
+    margin-top: 5px;
+  }
+  #tenders-table_length, #tenders-table_filter{
+      text-align: left;
+      margin-bottom: 3px;
+  }
+
+}

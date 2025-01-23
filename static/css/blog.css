@@ -1,0 +1,190 @@
+/* General Styles */
+:root {
+    --bs-primary: #9A5B7E; /* Muted Pinkish-Purple */
+    --bs-secondary: #C895B5; /* Soft Pinkish-Purple */
+    --bs-success: #7A5B6E; /* Dark Muted Purple */
+    --bs-info: #E8B4D4; /* Light Pink */
+    --bs-warning: #D97C8C; /* Coral Pink for contrast */
+    --bs-light: #F5E9F2; /* Very Light Pink */
+    --bs-dark: #3E2A35; /* Deep Purple-Brown */
+    --bs-taupe: #A88B9E; /* Muted Taupe */
+    --bs-gray: #C4B7C1; /* Light Gray with a hint of pink */
+    --bs-mist: #E9DFE6; /* Soft Mist with a pinkish tone */
+    --bs-white: #FFFFFF; /* Pure White */
+    --bs-black: #000000; /* Black */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.other-content {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Carousel Section */
+.carousel-section {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.carousel-section main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-section .bg,
+.carousel-section .bg2 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.carousel-section .bg {
+  top: -4rem;
+  left: -12rem;
+}
+
+.carousel-section .bg2 {
+  bottom: -2rem;
+  right: -3rem;
+  width: 9.375rem;
+}
+.carousel-section main .left-des {
+    max-width: 50%;
+}
+.carousel-section main > div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: #717171;
+}
+
+.carousel-section main > div h1 {
+  text-transform: capitalize;
+   font-family: "Bebas Neue", serif;
+    /*font-weight: 400;*/
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.carousel-section main > div hr {
+  display: block;
+  background: var(--bs-primary);
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+.carousel-section main > div p {
+  line-height: 1.6;
+}
+
+.carousel-section main a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+.carousel-section main > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.188rem;
+  padding: 0.625rem 1.875rem;
+}
+
+.carousel-section main > div > a:hover {
+  border: 0.125rem solid #005baa;
+  color: #005baa;
+}
+
+/* Swiper Styles */
+.swiper {
+  width: 100%;
+  padding-top: 3.125rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-pagination {
+  bottom: 1.25rem !important;
+}
+
+.swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+.swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+
+.swiper-slide {
+  width: 18.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .carousel-section main {
+    flex-direction: row;
+    align-items: center;
+  }
+  .bg,
+  .bg2 {
+    opacity: 0.1;
+  }
+}
+
+@media screen and (min-width: 93.75rem) {
+  .swiper {
+    width: 85%;
+  }
+}

@@ -1,0 +1,32 @@
+
+
+        /* Adjust styling for phone input */
+        #phone_number {
+            padding-left: 50px !important; /* Add space for the country flag */
+            font-size: 18px !important; /* Increase font size */
+            height: 55px; /* Make the input field taller */
+            width: 280px;
+        }
+
+        /* Style the country flag and dial code */
+        .iti__flag-container {
+            width: 60px !important; /* Adjust the width of the flag container */
+        }
+
+        .iti__selected-flag {
+            width: 70px !important; /* Adjust the size of the flag */
+            height: 50px !important; /* Adjust the size of the flag */
+        }
+
+        /* Dropdown size adjustments */
+        .iti__country-list {
+            font-size: 16px !important; /* Make the country list font larger */
+        }
+
+
+        /* Optional: Adjust the image on the right side */
+        .col-xl-6 img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }

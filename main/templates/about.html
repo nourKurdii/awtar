@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h3 class="text-white display-3 mb-4">About Us</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href={% url 'index' %}>Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-white">About Us</li>
+        </ol>
+    </div>
+</div>
+<!-- Header End -->
+<!-- About Start -->
+    <div class="container-fluid about py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- About Image -->
+                <div class="col-xl-5">
+                    <div class="h-100">
+                        <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="col-xl-7">
+                    <h5 class="text-uppercase text-primary">About Us</h5>
+                    <h1 class="mb-4">Our main goal is to </h1>
+                    <p class="fs-5 mb-4 text-dark">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+
+                    <!-- Tabs for About, Mission, Vision -->
+                    <div class="tab-class bg-secondary p-4">
+                    <ul class="nav d-flex mb-2">
+                        <li class="nav-item mb-3">
+                            <a class="d-flex py-2 text-center bg-white active" data-bs-toggle="pill" href="#tab-1">
+                                <span class="text-dark" style="width: 150px;">About</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a class="d-flex py-2 px-2 text-center bg-white" data-bs-toggle="pill" href="#tab-2">
+                                <span class="text-dark" style="width: 150px;">Message</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a class="d-flex py-2 text-center bg-white" data-bs-toggle="pill" href="#tab-3">
+                                <span class="text-dark" style="width: 150px;">Vision</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+                                        <div class="text-start my-auto">
+                                            <h5 class="text-uppercase mb-3">About Us</h5>
+                                            <p class="mb-4">{{ about_content.about }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+                                        <div class="text-start my-auto">
+                                            <h5 class="text-uppercase mb-3">Our Message</h5>
+                                            <p class="mb-4">{{ about_content.message }}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex">
+                                        <div class="text-start my-auto">
+                                            <h5 class="text-uppercase mb-3">Our Vision</h5>
+                                            <p class="mb-4">{{ about_content.vision }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- About End -->
+
+<!--  values and goals -->
+<div class="services-page__container">
+
+        <div class="services-page__grid">
+            <!-- Values Section -->
+            <div class="services-page__section">
+
+            <div class="services-page__section-title">
+                    <i class="fas fa-heart"></i> <!-- Icon on top of the title -->
+                    <h2>Our Values</h2> <!-- Title below the icon -->
+                </div>
+
+                <div class="services-page__points">
+                    <ul class="services-page__points-list">
+                        <li class="services-page__points-item">Combating intolerance and prejudice</li>
+                        <li class="services-page__points-item">Equality between men and women</li>
+                        <li class="services-page__points-item">Transparency</li>
+                        <li class="services-page__points-item">Ethics</li>
+                        <li class="services-page__points-item hidden">Pluralism</li>
+                        <li class="services-page__points-item hidden">Volunteering</li>
+                        <li class="services-page__points-item hidden">Preserving the Palestinian identity heritage</li>
+                        <li class="services-page__points-item hidden">Belonging to the Palestinian social fabric</li>
+                    </ul>
+                </div>
+                <button class="services-page__more-button" onclick="togglePoints(this, 'values')">MORE</button>
+            </div>
+
+            <!-- Target Group Section -->
+            <div class="services-page__section">
+                <div class="services-page__section-title">
+                    <i class="fas fa-users"></i> <!-- Icon on top of the title -->
+                    <h2>Target Groups</h2> <!-- Title below the icon -->
+                </div>
+
+                <div class="services-page__points">
+                    <ul class="services-page__points-list">
+                        <li class="services-page__points-item">Children</li>
+                        <li class="services-page__points-item">Youth of both nationalities</li>
+                        <li class="services-page__points-item">Women</li>
+                        <li class="services-page__points-item">People with special needs</li>
+                        <li class="services-page__points-item hidden">The elderly</li>
+                    </ul>
+                </div>
+                <button class="services-page__more-button" onclick="togglePoints(this, 'targetGroup')">MORE</button>
+            </div>
+
+            <!-- Strategic Goals Section -->
+            <div class="services-page__section">
+                <div class="services-page__section-title">
+                    <i class="fas fa-bullseye"></i> <!-- Icon on top of the title -->
+                    <h2>Strategic Goals</h2> <!-- Title below the icon -->
+                </div>
+                <div class="services-page__points">
+                    <ul class="services-page__points-list">
+                        <li class="services-page__points-item">Elevate artistic and cultural growth for all.</li>
+                        <li class="services-page__points-item">Train skilled arts professionals aligned with community needs.</li>
+                        <li class="services-page__points-item">Build an artistic culture rooted in social and moral values.</li>
+                        <li class="services-page__points-item hidden">Harness art as a tool for societal change and critical thinking.</li>
+                        <li class="services-page__points-item hidden">Provide resources to inspire creativity and innovation in art.</li>
+                        <li class="services-page__points-item hidden">Develop well-rounded, creative individuals through diverse programs.</li>
+                        <li class="services-page__points-item hidden">Providing direct scientific and technical services and consultations to the society associations.</li>
+                        <li class="services-page__points-item hidden">Strengthen and empower civil society groups in arts and culture.</li>
+                        <li class="services-page__points-item hidden">Support and economically empower women through artistic practice.</li>
+                        <li class="services-page__points-item hidden">Economic empowerment of women through cultural and artistic tools.</li>
+                    </ul>
+                </div>
+                <button class="services-page__more-button" onclick="togglePoints(this, 'goals')">MORE</button>
+            </div>
+        </div>
+    </div>
+<!-- Values and goals End -->
+
+<!-- Team Start -->
+    <div class="container-fluid team py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                <h5 class="text-uppercase text-primary">Our Team</h5>
+                <h1 class="mb-4">Meet Our Dedicated Team Members</h1>
+            </div>
+            {% for member in team_members %}
+            <!-- Team Grid -->
+            <div class="row g-4">
+                <!-- Team Member -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <div class="team-member-info text-center p-4">
+                            <h5 class="mb-2">{{ member.name }}</h5>
+                            <p class="mb-0">{{ member.role }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+<!-- Team End -->
+
+
+
+{% endblock %}

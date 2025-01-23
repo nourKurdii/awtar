@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Activity Form{% endblock %}
+
+{% block styles %}
+    <link href="{% static 'css/activity_form.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+    <div style="height: 50px;"></div>
+    <!-- Course Registration Start -->
+    <div class="container-fluid wh-light py-5">
+        <div class="container py-5">
+            <div class="contact p-5">
+                <div class="row g-4">
+                    <!-- Form Section (Left Side) -->
+                    <div class="col-xl-6">
+                        <h1 class="mb-4">Registration</h1>
+                        <p class="mb-4">Register and join us for an enriching experience. Fill out the form below to secure your spot.</p>
+
+
+
+                        <!-- Display Current Date -->
+                        <label for="registration_date" class="form-label">Today's Date: Sunday, January 6, 2025</label>
+
+                        <form method="post" >
+                            <!-- Registration Date (hidden field) -->
+                            <input type="hidden" name="registration_date" value="{{ current_date }}" />
+
+                            <div class="row gx-4 gy-3">
+                                <!-- Full Name -->
+                                <div class="col-xl-6">
+                                    <input type="text" name="full_name" class="form-control bg-white border-0 py-3 px-4 rounded-lg shadow-sm" placeholder="Enter your full name" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-xl-6">
+                                    <input type="email" name="email" class="form-control bg-white border-0 py-3 px-4 rounded-lg shadow-sm" placeholder="Enter your email" required>
+                                </div>
+
+                                <!-- Phone Number -->
+                                <div class="col-xl-6">
+                                    <input type="tel" id="phone_number" name="phone_number" class="form-control bg-white border-0 py-3 px-4 rounded-lg shadow-sm" placeholder="Enter your phone number" required>
+                                </div>
+
+                                <!-- Course Selection -->
+                                <div class="col-xl-6">
+                                    <select name="course_or_event" class="form-control bg-white border-0 py-3 px-4 rounded-lg shadow-sm" required>
+                                        <option value="" disabled selected>Select Course or Event</option>
+
+                                            <option value="1">Course 1: Introduction to Environmental Studies</option>
+                                            <option value="2">Course 2: Sustainable Development</option>
+                                            <option value="3">Course 3: Climate Change and its Impact</option>
+                                            <option value="4">Course 4: Renewable Energy Solutions</option>
+
+
+
+                                    </select>
+                                </div>
+
+                                <!-- City Selection -->
+                                <div class="col-xl-6">
+                                    <select name="city" class="form-control bg-white border-0 py-3 px-4 rounded-lg shadow-sm" required>
+                                        <option value="" disabled selected>Select City</option>
+                                        <option value="city1">City 1</option>
+                                        <option value="city2">City 2</option>
+                                        <option value="city3">City 3</option>
+                                    </select>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3 px-5 rounded-lg shadow-lg transition-all hover:bg-blue-500 hover:shadow-xl" type="submit">
+                                        Register Now
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <!-- Image Section (Right Side) -->
+                    <div class="col-xl-6">
+                        <!-- Replace with your actual image URL -->
+                        <img src="{% static 'img/bg.jpg' %}"  alt="Course Image" class="img-fluid rounded-lg shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

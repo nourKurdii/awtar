@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Event{% endblock %}
+{% block styles %}
+    <link href="{% static 'css/event.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+ <div style="height: 150px;"></div>
+
+
+    <div class="event">
+        <div class="wrapper">
+            <div class="banner-image">
+                <img src="{% static 'img/bg.jpg' %}" alt="Event Banner">
+            </div>
+            <h1>Event Name</h1>
+            <p>Join us for an unforgettable experience filled with music, art, and inspiration! Explore vibrant performances, workshops, and networking opportunities designed to engage and connect people of all ages. Experience the thrill of live entertainment, delicious culinary offerings, and a bustling marketplace showcasing talented creators. Don’t miss out on this extraordinary event that promises excitement and enrichment for everyone!</p>
+        </div>
+
+    </div>
+ <div style="height: 40px;"></div>
+    <!-- Album Section -->
+    <div class="album-section">
+        <h2 class="album-title">Event Image Gallery</h2>
+        <div class="album">
+            <div class="img-cont">
+                <img class="img" src="{% static 'img/event1.jpg' %}" alt="Image 1">
+                <img class="img img-mid" src="{% static 'img/announcement2.jpg' %}"  alt="Image 2">
+                <img class="img img-big" src="{% static 'img/visit-1.jpg' %}" alt="Image 3">
+            </div>
+            <div class="img-cont">
+                <img class="img img-big" src="{% static 'img/visit-1.jpg' %}" alt="Image 4">
+                <img class="img img-mid" src="{% static 'img/bg.jpg' %}" alt="Image 5">
+                <img class="img" src="{% static 'img/event1.jpg' %}" alt="Image 6">
+            </div>
+            <div class="img-cont">
+                <img class="img img-mid" src="{% static 'img/event1.jpg' %}" alt="Image 7">
+                <img class="img img-big" src="{% static 'img/announcement2.jpg' %}"  alt="Image 8">
+                <img class="img" src="{% static 'img/bg.jpg' %}" alt="Image 9">
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Activities{% endblock %}
+{% block styles %}
+    <link href="{% static 'css/activities.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+  <div style="height: 100px;"></div>
+
+ 
+    <!-- Main Content -->
+    <section class="course-section">
+        <div class="course-box">
+            <img src="{% static 'img/music-classes.jpg' %}" alt="Course Image" class="course-image">
+            <div class="course-info">
+                <h2 class="course-title">Web Development 101</h2>
+                <p class="course-description">Learn the basics of web development, including HTML, CSS, JavaScript, and
+                    more. This course is designed for beginners who want to dive into the world of web development.</p>
+
+                <!-- Start and End Date Section -->
+                <div class="date-container">
+                    <div class="date-box">
+                        <strong>Start Date</strong>
+                        <span>February 1, 2025</span>
+                    </div>
+                    <div class="date-box">
+                        <strong>End Date</strong>
+                        <span>June 1, 2025</span>
+                    </div>
+                </div>
+
+                <a href="contact.html">
+                    <button class="register-btn">Register Now</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Album Section -->
+<div class="album-section">
+    <h2 class="album-title">View more photos</h2>
+     <div class="album">
+        <div class="img-cont">
+            <img class="img" src="{% static 'img/bg.jpg' %}" alt="Image 1">
+            <img class="img img-mid" src="{% static 'img/music-classes.jpg' %}" alt="Image 2">
+            <img class="img img-big" src="{% static 'img/computer-lab.jpg' %}"  alt="Image 3">
+        </div>
+        <div class="img-cont">
+            <img class="img img-big" src="{% static 'img/music-classes.jpg' %}" alt="Image 4">
+            <img class="img img-mid" src="{% static 'img/computer-lab.jpg' %}"  alt="Image 5">
+            <img class="img" src="{% static 'img/bg.jpg' %}" alt="Image 6">
+        </div>
+        <div class="img-cont">
+            <img class="img img-mid" src="{% static 'img/music-classes.jpg' %}" alt="Image 7">
+            <img class="img img-big" src="{% static 'img/bg.jpg' %}" alt="Image 8">
+            <img class="img" src="{% static 'img/computer-lab.jpg' %}"  alt="Image 9">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

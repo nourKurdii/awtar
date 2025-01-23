@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+{% block styles %}
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/blog.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Header Start -->
+            <div class="container-fluid bg-breadcrumb">
+                <div class="container text-center py-5" style="max-width: 900px;">
+                    <h3 class="text-white display-3 mb-4">Blog</h1>
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href={% url 'index' %}>Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active text-white">Blog</li>
+                    </ol>
+                </div>
+            </div>
+<!-- Header End -->
+<div class="page-content">
+  <div class="other-content">
+    <h2> Latest News & Highlights </h2>
+  </div>
+
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <main>
+      <div class="left-des">
+        <h1>Visit of Deputy Representative of Japan to the state</h1>
+        <hr />
+        <p>From the visit of Ms. Maiko ISHIKAWA, Deputy Representative of Japan to the state of Palestine, Mr. Yoshihiko HIGUCHI, from the Cultural Attache, and Mr. Nezar Maroof, Cultural & Media Advisor to The Society of Awtar Center for Artistic and Cultural Creativeness today 10.12.2024. in order to discuss ways of joint cooperation with Mr. Salam Qaoud, Awtar manager & chairman and Awtar members of the administrative body Dr. Firas Al-Shakhsher & Mrs. Suad Hijjawi.</p>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide swiper-slide--one">
+              <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide swiper-slide--two">
+              <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide swiper-slide--three">
+              <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide swiper-slide--four">
+              <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+              <img src="{% static 'img/bg.jpg' %}" class="img-fluid w-100 h-100" alt="About Us">
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <img src="https://cdn.pixabay.com/photo/2021/11/04/19/39/jellyfish-6769173_960_720.png" alt="" class="bg" />
+      <img src="https://cdn.pixabay.com/photo/2012/04/13/13/57/scallop-32506_960_720.png" alt="" class="bg2" />
+    </main>
+  </section>
+</div>
+{% endblock %}

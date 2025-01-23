@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Activity{% endblock %}
+{% block styles %}
+    <link href="{% static 'css/activity.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+ <div style="height: 200px;"></div>
+
+    <div class="main">
+        <h2 class="title">All courses You May Be Interested In</h2>
+        <ul class="cards">
+            <!-- Card 1 -->
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <h4 class="card_title open">Opend</h4>
+                        <img src="{% static 'img/bg.jpg' %}" alt="Mixed vegetable salad in a mason jar.">
+                    </div>
+                    <div class="card_content">
+                        <div class="card_text">
+                            <span class="note">Name Course</span>
+                            <br>  <br>
+                            <p>Dig into the freshest veggies of the season! This salad-in-a-jar features a mixture of leafy greens and seasonal vegetables, fresh from the farmer's market.</p>
+                            <button class="btn-see-more closed">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <h4 class="card_title closed">Closed</h4>
+                        <img src="{% static 'img/bg.jpg' %}" alt="Mixed vegetable salad in a mason jar.">
+                    </div>
+                    <div class="card_content">
+                        <div class="card_text">
+                            <span class="note">Name Course</span>
+                            <br>  <br>
+                            <p>Dig into the freshest veggies of the season! This salad-in-a-jar features a mixture of leafy greens and seasonal vegetables, fresh from the farmer's market.</p>
+                            <button class="btn-see-more closed">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <h4 class="card_title closed">Closed</h4>
+                        <img src="{% static 'img/bg.jpg' %}" alt="Mixed vegetable salad in a mason jar.">
+                    </div>
+                    <div class="card_content">
+                        <div class="card_text">
+                            <span class="note">Name Course</span>
+                            <br>  <br>
+                            <p>Dig into the freshest veggies of the season! This salad-in-a-jar features a mixture of leafy greens and seasonal vegetables, fresh from the farmer's market.</p>
+                            <button class="btn-see-more closed">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </li>  <li class="cards_item">
+                <div class="card">
+                    <div class="card_image">
+                        <h4 class="card_title open">Opend</h4>
+                        <img src="{% static 'img/bg.jpg' %}" alt="Mixed vegetable salad in a mason jar.">
+                    </div>
+                    <div class="card_content">
+                        <div class="card_text">
+                            <span class="note">Name Course</span>
+                            <br>  <br>
+                            <p>Dig into the freshest veggies of the season! This salad-in-a-jar features a mixture of leafy greens and seasonal vegetables, fresh from the farmer's market.</p>
+                            <button class="btn-see-more closed">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Additional Cards... -->
+        </ul>
+    </div>
+
+
+{% endblock %}

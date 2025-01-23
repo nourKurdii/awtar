@@ -78,11 +78,11 @@ WSGI_APPLICATION = "awtar.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nour77$awtar_db',  # Database name
-        'USER': 'nour77',  # Database username
-        'PASSWORD': 'awtar_db',  # Database password
-        'HOST': 'nour77.mysql.pythonanywhere-services.com',  # Database host
-        'PORT': '3306',  # Default MySQL port
+        'NAME': '',  # Database name
+        'USER': '',  # Database username
+        'PASSWORD': '',  # Database password
+        'HOST': '',  # Database host
+        'PORT': '',  # Default MySQL port
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",  # Ensures strict mode
         },
